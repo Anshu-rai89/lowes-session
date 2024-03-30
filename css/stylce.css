@@ -1,0 +1,49 @@
+body {
+ padding: 0;
+margin: 0;
+}
+header {
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    color: white;
+  
+}
+
+.container {
+    height: 1000px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+main{
+    width: 80%;
+    display: inline-block;
+    background-color: grey;
+    height: 70%;
+    color: white;
+}
+.div-1 {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    background-color: red;
+    color: white;
+    bottom: 0;
+    left: 30px
+}
+
+aside {
+    width: 10%;
+    height: 100%;
+    margin-right: 50px;
+    display: inline-block;
+    background-color: grey;
+}
+
+footer {
+    height: 100px;
+    background-color: black;
+    color: white;
+
+}
