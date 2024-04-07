@@ -16,3 +16,22 @@ body {
 .input-container {
     margin: 50px;
 }
+button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    margin-left: 40px;
+    font-weight: bolder;
+
+}
+
+input {
+    height: 30px;
+}
+
+li {
+    padding: 20px;
+    border: red 1px solid;
+    width: 300px;
+    margin: 20px;
+}

@@ -30,6 +30,8 @@ function compute(a,b,operation) {
 }
 
 var res3 = compute(10,23, subtract)
+
+// subtract  -> It is a callback function 
 console.log("res3", res3);
 
 

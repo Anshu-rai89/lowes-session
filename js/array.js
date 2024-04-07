@@ -82,7 +82,7 @@ for (let value of a12) {
 
 //a12.forEach(print);
 
-a12.forEach( function (value, index) {
+a12.forEach(  (value, index) => {
     console.log(value, index)
 })
 
@@ -92,21 +92,21 @@ const arrNos = [1,2,3,4];
 
 var sqNos = [];
 
-arrNos.forEach( function (value) {
+arrNos.forEach(  (value)=>  {
     const sq = value * value ;
     sqNos.push(sq);
 })
 
 console.log("Squares", sqNos);
 
-const ans = arrNos.map(function (value) {
+const ans = arrNos.map( (value) => {
     return value * value
 })
 
 console.log("Ans", ans);
 
 // from arrNos filter out all even number 
-const evenNos = arrNos.filter( function (value) {
+const evenNos = arrNos.filter(  (value)=>  {
     const isEven = value % 2 == 0 ;
     return isEven
 })
@@ -120,8 +120,11 @@ newArr.sort();
 console.log(newArr);
 
 var nos = [1,4,11,45,2,5,89, 22];
-nos.sort(function (a, b) {
+
+
+nos.sort( (a, b)=>  {
     return b-a;
 });
+
 console.log(nos);
 

@@ -6,9 +6,30 @@
 
 // Access add button from dom 
 const addButton = document.getElementById("add-btn");
+const deleteButtons = Array.from(document.getElementsByClassName("delBtn"));
+const ulElement = document.getElementById("list-ul");
 
 
 addButton.addEventListener("click", handleAddButtonOnClick);
+
+deleteButtons.forEach(function (deleteBtn) {
+    console.log("Delete Btn", deleteBtn);
+    deleteBtn.addEventListener('click', handleDelete)
+})
+
+ulElement.addEventListener("click", function (event) {
+    console.log(
+      "UL clicked",
+      event.target.tagName,
+      event.target.classList,
+      event.target.className
+    );
+
+
+    // if(event.target.className === 'delBtn') {
+    //     event.target.parentElement.remove();
+    // }
+});
 
 function handleAddButtonOnClick () {
  console.log("Click happend");
@@ -35,13 +56,36 @@ function handleAddButtonOnClick () {
  // we need to create a li element 
 
 const li = document.createElement('li');
+
+li.onclick = function (event) {
+    console.log("Li is clicked", event.target);
+};
+
  // we need to add the input data in li element
- li.textContent = inputData;
+ //li.textContent = inputData;
    
+// They are prone to Attack 
+// Dangerosly set inner html 
+const innerHtmlOfLi = `<span> ${inputData} </span> <button onclick="handleDelete(event)" class= "delBtn"> Delete </button>`;
+
+li.innerHTML = innerHtmlOfLi;
+ // span 
+ // delete
  // we need to insert the li in ul 
 
  listUL.appendChild(li);
 
  nameInputElement.value = "";
 
+}
+
+
+// function handleLiClick (event) {
+//     console.log("Li was clicked", event);
+// }
+function handleDelete (event) {
+  console.log("Handle Delete clicked", event.target);
+  event.stopPropagation();
+//   const parenLiElement = event.target.parentElement;
+//   parenLiElement.remove();
 }

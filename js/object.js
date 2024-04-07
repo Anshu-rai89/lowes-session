@@ -17,7 +17,7 @@ console.log(
 console.log("Student Name", student["name"]);
 
 // Dot notation
-console.log("Student Name", student.name);
+console.log("Student Nae", student.name);
 console.log("Student class", student.className);
 
 // How can we dynamically define and use a key
@@ -42,6 +42,7 @@ console.log("Obj2", obj2);
 // How can we delete a key value data from object 
 
 delete obj2.city;
+delete obj2["city"]
 console.log("Obj2 after delete", obj2);
 
 const obj3 = {}
@@ -91,6 +92,8 @@ const user = {
   signIn: function () {
     console.log("User signed in");
   },
+  isAdmin: true,
+  age: 24
 };
 
 user.signIn();
